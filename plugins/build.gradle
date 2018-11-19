@@ -10,16 +10,15 @@ group = "com.inutilfutil.gradle"
 version = '1.0.3'
 
 pluginBundle {
-  website = 'https://github.com/paulo-raca/gradle-plugins'
-  vcsUrl = 'https://github.com/paulo-raca/gradle-plugins'
-  tags = ['android', 'placeholder']
-
   plugins {
-    greetingsPlugin {
+    androidResourcePlaceholder {
       id = 'com.inutilfutil.android-resource-placeholder'
       description = 'Support for ${placeholder} in Android resource files'
       displayName = 'Replaces placeholders in Android XML Resources'
       version = '1.0.3'
+      website = 'https://github.com/paulo-raca/gradle-plugins'
+      vcsUrl = 'https://github.com/paulo-raca/gradle-plugins'
+      tags = ['android', 'placeholder']
     }
   }
 }
