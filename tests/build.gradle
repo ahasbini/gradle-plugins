@@ -1,7 +1,14 @@
 //Use published plugin version
 ///*
-plugins {
-    id "com.inutilfutil.android-resource-placeholder" version "1.0.3"
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.com.inutilfutil.gradle:androidPlugins:1.0.3"
+    }
 }
 //*/
 
@@ -14,11 +21,10 @@ buildscript {
         classpath files('../plugins/build/libs/plugins-1.0.3.jar')
     }
 }
-apply plugin: "com.inutilfutil.android-resource-placeholder"
 */
 
 apply plugin: 'com.android.application'
-
+apply plugin: "com.inutilfutil.android-resource-placeholder"
 
 android {
     compileSdkVersion 26
