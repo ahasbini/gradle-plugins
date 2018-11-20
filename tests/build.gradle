@@ -1,5 +1,5 @@
 //Use published plugin version
-///*
+/*
 buildscript {
     repositories {
         maven {
@@ -10,7 +10,7 @@ buildscript {
         classpath "gradle.plugin.com.inutilfutil.gradle:androidPlugins:1.0.3"
     }
 }
-//*/
+*/
 
 // === OR ===
 
@@ -23,8 +23,22 @@ buildscript {
 }
 */
 
+// === OR ===
+
+//Use the composite build `includeBuild` capability to compile the plugin and add it to the classpath
+///*
+buildscript {
+    dependencies {
+        classpath 'com.inutilfutil.gradle:androidPlugins:1.0.4'
+    }
+}
+
+apply plugin: 'com.inutilfutil.info'
+//*/
+
+
 apply plugin: 'com.android.application'
-apply plugin: "com.inutilfutil.android-resource-placeholder"
+apply plugin: 'com.inutilfutil.android-resource-placeholder'
 
 android {
     compileSdkVersion 26
